@@ -6,7 +6,7 @@ public class studikasus216 {
 
         System.out.println("nama mahasiswa: ");
         String nama=j.nextLine();
-        System.out.println("jenis kegiatan (BELMAWA, BAKORMA, MANDIRI): ");
+        System.out.println("jenis kegiatan (BELMAWA, BAKORMA, MANDIRI, PKM): ");
         String kegiatan=j.nextLine();
         
         String pesan;
@@ -27,22 +27,22 @@ public class studikasus216 {
             pesan="anda bukan juara. Dana tidak diberikan";
             }
         
-        // } else if (kegiatan.equalsIgnoreCase("PKM")) {
-        //     System.out.println("jumlah dokumen: ");
-        //     int dokumen=j.nextInt();
-        //     System.out.println("Status pendanaan PKM :");
-        //     int PKM=j.nextInt();
+        } else if (kegiatan.equalsIgnoreCase("PKM")) {
+            System.out.println("jumlah dokumen: ");
+            int dokumen=j.nextInt();
+            System.out.println("Status pendanaan PKM :");
+            int PKM=j.nextInt();
             
 
-        //     if (PKM == 1) {
-        //         if (dokumen == 4) {
-        //             pesan=("dokumen lengkap. Dana penghargaan diberikan");
-        //         } else {
-        //             pesan=("dokumen tidak lengkap (kurang ")+ (4-dokumen)+(" dokumen) .Dana penghargaan tidak diberikan");
-        //         }
-        //     } else {
-        //         pesan=("tidak lolos pendanaan PKM. Dana pengahargaan tidak diberikan");
-        //     }
+            if (PKM == 1) {
+                if (dokumen == 4) {
+                    pesan=("dokumen lengkap. Dana penghargaan diberikan");
+                } else {
+                    pesan=("dokumen tidak lengkap (kurang ")+ (4-dokumen)+(" dokumen) .Dana penghargaan tidak diberikan");
+                }
+            } else {
+                pesan=("tidak lolos pendanaan PKM. Dana pengahargaan tidak diberikan");
+            }
         }else {
            pesan=("Kegiatan termasuk kategori lainnya. Dana tidak diberikan");
         }
